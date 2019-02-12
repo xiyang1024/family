@@ -1,0 +1,23 @@
+#springboot\u5E94\u7528\u7A0B\u5E8F\u7684\u7AEF\u53E3\u53F7
+server:
+  port: 8080
+#\u6570\u636E\u5E93\u914D\u7F6E .springboot 2.0 \u9ED8\u8BA4\u4F7F\u7528\u7684\u6570\u636E\u6E90Hikari
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.31.66:3306
+    username: ycj
+    password: ycj123
+
+  jpa:
+    hibernate:
+      ddl-auto: update #\u6570\u636E\u5B9A\u4E49\u8BED\u8A00\u7684\u8868\u7684\u751F\u6210\u7B56\u7565 update \u9996\u5148\u68C0\u6D4B\u8868\u7684\u7ED3\u6784\uFF0C\u5982\u679C\u4E0D\u4E00\u6837\u5C31\u66F4\u65B0\u8868\u7ED3\u6784
+                       #create:\u5982\u679C\u539F\u8868\u7ED3\u6784\u5B58\u5728\uFF0C\u5C31\u5148\u5220\u9664\u8868\u7ED3\u6784\uFF0C\u518D\u521B\u5EFA\u8868\u7ED3\u6784
+                       #create-drop:\u5148\u5220\u9664\u8868\u7ED3\u6784\uFF0C\u518D\u521B\u5EFA\u8868\u7ED3\u6784
+                       #validate:\u68C0\u6D4B\u8868\u7684\u7ED3\u6784
+    show-sql: true #\u663E\u793Asql\uFF0C\u9ED8\u8BA4\u4E0D\u663E\u793Afalse
+
+  thymeleaf:
+    encoding: utf-8 #thymeleaf\u7684\u7F16\u7801\u9ED8\u8BA4\u4E3Autf-8
+    cache: false #thymeleaf\u9759\u6001\u9875\u9762\u7684\u7F13\u5B58\uFF0C\u9ED8\u8BA4\u4E3Atrue
+    mode: HTML #\u4F7F\u7528html5\u6A21\u578B
